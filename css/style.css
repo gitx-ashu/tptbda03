@@ -1,0 +1,155 @@
+/* Created by 𝖆𝖘𝖍𝖚𝖙𝖔𝖘𝖍 𝕶𝖚𝖒𝖆𝖗 𝕾𝖎𝖓𝖌𝖍 */
+
+
+*{
+    box-sizing:border-box;
+    padding:0;
+    margin:0;
+   }
+   body {
+   padding:0;
+   margin:0;
+   min-height:100vh;
+   font-family: 'Caveat', cursive;
+   line-height:1.5;
+   background:#000;
+   color:#fff;
+   }
+   .fixed {
+    position:fixed; 
+    top:0;
+    left:0;
+    bottom:0;
+    height:100vh;
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    z-index:9;
+    overflow:hidden;
+    padding:20px;
+    background:#000;
+    transition:0.5s;
+   }
+   .loader {
+    text-align:center;
+   }
+   .loader h1{
+    font-size:3rem;
+    animation:blink 1s linear infinite;
+   }
+   @keyframes blink {
+    0%,100%{
+     opacity:1;
+    }
+    50%{
+     opacity:0;
+    } 
+   }
+   img {
+    width:100%;
+   }
+   section {
+    min-height:100vh;
+    transition:0.5s ease;
+   }
+   .sec1{
+    background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcStDA6uVeogyM2rIqDxVJbR6DNLaH1MVO3Taw&usqp=CAU");
+    background-size:cover;
+    background-position: center top;
+    z-index:6;
+    text-align:center;
+   }
+   .sec2 {
+    position:relative;
+    display:none;
+   }
+   
+   .overlay{
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    background:rgba(0,0,0,0.5);
+    z-index:2;
+    }
+    section video{
+     position:absolute;
+     top:0;
+     left:0;
+     height:100vh;
+     width:100%;
+     object-fit:cover;
+     z-index:1;
+    }
+    .content {
+     position:absolute; 
+     z-index:3;
+     text-align:center;
+     width:100%;
+     padding:0 20px;
+     top:50%;
+     transform:translateY(-50%);
+    }
+   .img {
+    height:150px;
+    width:150px;
+    border-radius:50%;
+    overflow:hidden;
+    margin:15px auto;
+    box-shadow:0px 0px 10px #ccc;
+    opacity:0.8;
+   }
+   .content h1{
+    font-size:2rem;
+    font-weight:bold;
+   }
+   p {
+    font-size:25px;
+   }
+   .summary img {
+    border-radius:20px;
+    opacity:0.8;
+    margin-bottom:15px;
+   }
+   .summary h1{
+    font-size:38px;
+   }
+   .summary p {
+    font-size:20px;
+    margin-bottom:15px;
+   }
+   .heart {
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    z-index:5;
+   }
+   button {
+    display:inline-block;
+    outline:none;
+    border:none;
+    border-radius:8px;
+    padding:6px 25px;
+    background:tomato;
+    color:#fff;
+    font-family: 'Caveat', cursive;
+    letter-spacing:1px;
+    font-size:20px;
+   }
+   .continue{
+    transform:translateY(30px);
+    transition:0.5s ease;
+    opacity:0;
+    z-index:0;
+   }
+   .continue.show {
+    transform:translateY(0);
+    opacity:1;
+    z-index:10;
+   }
+   .hide {
+    display:none;
+   }
